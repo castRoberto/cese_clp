@@ -39,8 +39,10 @@ architecture vio_ila_arq of vio_ila is
 	constant ADDR_W: natural:= 15;
 	constant PUNTOS: natural:= (2**ADDR_W)-1;
 	constant PASO_W: natural:= 4;
+    constant TAPS: natural:= 100;
 
 	signal nco_sin_o: unsigned (DATA_W-2 downto 0);          -- salida del seno (salgo con N-2 bits)
+    signal fir_sin_o: unsigned (DATA_W-2 downto 0);
 	signal nco_cos_o: unsigned (DATA_W-2 downto 0); 
     signal rst: std_logic_vector (0 downto 0);
 	
@@ -71,12 +73,25 @@ begin
             salida_cos => nco_cos_o,
             salida_sen => nco_sin_o
 	    );
+
+    --
+    fir_inst: entity work.fir
+        generic map (
+            C_TAPS 		=> TAPS,
+			C_DATA_W 	=> DATA_W - 1
+	    )
+        port map (
+            clk => clk_i,
+            rst => rst(0),
+            x_in => nco_sin_o,
+            y_out => fir_sin_o
+	    );
     
     --
     ila_inst : ila_0
         port map (
             clk => clk_i,
-            probe0 => std_logic_vector (nco_cos_o),
+            probe0 => std_logic_vector (fir_sin_o),
             probe1 => std_logic_vector (nco_sin_o)
         );
 
