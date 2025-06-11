@@ -7,27 +7,13 @@ entity nco_test is
 end;
 
 architecture p of nco_test is
-
-	component nco is
-		generic(
-			DATA_W: natural := 11; -- cantidad de bits del dato + 1
-			ADDR_W: natural := 12; -- cantidad de bits de las direcciones de la LUT
-			modulo: natural;		-- cantidad de puntos
-			PASO_W: natural			-- cantidad de bits del paso
-		);
-		port(
-			clk, rst: in std_logic;
-			paso: in unsigned(PASO_W-1 downto 0); -- valor de entrada (paso)
-			salida_cos, salida_sen: out unsigned(DATA_W-2 downto 0)
-		);
-	end component;
 	
 	constant DATA_W: natural:= 13;
 	constant ADDR_W: natural:= 15;
 	constant PUNTOS: natural:= (2**ADDR_W)-1;
 	constant PASO_W: natural:= 4;
 
-	constant TAPS: natural := 100;
+	constant TAPS: natural := 8; -- cantidad de taps del filtro FIR
 	
 	signal clk: std_logic:= '0';
 	signal rst: std_logic:= '1';
@@ -43,12 +29,12 @@ begin
 	paso_prueba <= "0001";--"0001";
 	--paso_prueba <= "0011", "1000" after 1000 us, "1100" after 2000 us, "0001" after 3000 us;
 	
-	nco_inst: nco
+	nco_inst: entity work.nco
 		generic map(
-			DATA_W,
-			ADDR_W,
-			PUNTOS,
-			PASO_W
+			DATA_W, -- cantidad de bits del dato + 1
+			ADDR_W, -- cantidad de bits de las direcciones de la LUT
+			PUNTOS, -- cantidad de puntos
+			PASO_W  -- cantidad de bits del paso
 		)
 		port map(
 			clk,
@@ -59,14 +45,14 @@ begin
 		);
 
 	fir_inst: entity work.fir
-        generic map (
-            C_TAPS 		=> TAPS,
-			C_DATA_W 	=> DATA_W - 1
-	    )
-        port map (
-            clk => clk,
-            rst => rst,
-            x_in => sin_o,
-            y_out => sin_fir
-	    );
+	  generic map (
+      C_TAPS 		=> TAPS,
+		  C_DATA_W 	=> DATA_W - 1
+	  )
+    port map (
+      clk => clk,
+      rst => rst,
+      x_in => sin_o,
+      y_out => sin_fir
+	  );
 end;

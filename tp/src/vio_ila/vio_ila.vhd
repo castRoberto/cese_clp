@@ -39,7 +39,7 @@ architecture vio_ila_arq of vio_ila is
 	constant ADDR_W: natural:= 15;
 	constant PUNTOS: natural:= (2**ADDR_W)-1;
 	constant PASO_W: natural:= 4;
-    constant TAPS: natural:= 100;
+    constant TAPS: natural:= 8;
 
 	signal nco_sin_o: unsigned (DATA_W-2 downto 0);          -- salida del seno (salgo con N-2 bits)
     signal fir_sin_o: unsigned (DATA_W-2 downto 0);
