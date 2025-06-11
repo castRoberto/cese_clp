@@ -6,17 +6,21 @@ use IEEE.numeric_std.all;
 
 entity fir is
 
-    generic (
-	    C_TAPS    : natural := 8;
-	    C_DATA_W  : natural := 12
+  generic (
+	    C_TAPS    : natural := 8; -- Cantidad de taps del filtro FIR
+	    C_DATA_W  : natural := 12 -- Cantidad de bits del dato de entrada y salida
 	);
 
-    port (
-        clk     : in std_logic;
-        rst     : in std_logic;
-        x_in    : in unsigned (C_DATA_W - 1 downto 0);
-        y_out   : out unsigned (C_DATA_W - 1 downto 0)
-    );
+  -- El numero de TAPs se calcula como 4 / delta(f)
+  -- deltas(f) = (f_cut - f_pass) / f_s = (8KHz - 3.8KHz) / 8KHz = 0.525
+  -- TAPS = 4 / 0.525 = 7.61 ~ 8
+
+  port (
+    clk     : in std_logic;
+    rst     : in std_logic;
+    x_in    : in unsigned (C_DATA_W - 1 downto 0);
+    y_out   : out unsigned (C_DATA_W - 1 downto 0)
+  );
 
 end fir;
 
@@ -24,10 +28,13 @@ end fir;
 
 architecture fir_arc of fir is
 
-  type t_coeff_array is array (0 to C_TAPS - 1) 
+  type t_coef_array is array (0 to C_TAPS - 1)
                      of signed (C_DATA_W - 1 downto 0);
 
-  constant COEFF : t_coeff_array :=
+  type t_prod_array is array (0 to C_TAPS - 1)
+                     of signed (C_DATA_W * 2 - 1 downto 0); -- 12 bits + 12 bits = 24 bits
+
+  constant COEFF : t_coef_array :=
     (X"00E",    -- Coef 0
      X"09B",    -- Coef 1
      X"293",    -- Coef 2
@@ -37,9 +44,11 @@ architecture fir_arc of fir is
      X"09B",    -- Coef 6
      X"00E");   -- Coef 7
 
+  signal produts : t_prod_array := (others => (others => '0'));
+
   -- Buffer circular para almacenar las muestras de entrada
   --
-  type t_buffer is array (0 to C_TAPS - 1) of unsigned (C_DATA_W - 1 downto 0);
+  type t_buffer is array (0 to C_TAPS - 1) of signed (C_DATA_W - 1 downto 0);
 
   signal circular_buffer : t_buffer;
 
@@ -49,7 +58,7 @@ architecture fir_arc of fir is
 
   -- Acumulador para la salida
   --
-  signal acc : signed (4 + C_DATA_W + C_TAPS - 1 downto 0);
+  signal acc : signed (C_DATA_W * 2 downto 0); -- 12 bits + 12 bits + 1 = 25 bits
 
   signal enable : std_logic;
 
@@ -57,7 +66,7 @@ begin
 
   gen_ena_inst: entity work.gen_ena
     generic map (
-      N => 12500--3125
+      N => 12500 -- 12500 = 125MHz(fpga clk) / 10kHz(Fs)
 	)
     port map (
       clk_i => clk,
@@ -76,19 +85,24 @@ begin
 
         circular_buffer <= (others => (others => '0'));
         acc <= (others => '0');
+        produts <= (others => (others => '0'));
         y_out <= (others => '0');
         buffer_index <= 0;
 
       elsif enable = '1' then
 
         -- Almacenar la nueva muestra en el buffer circular
-        circular_buffer (buffer_index) <= x_in;
+        circular_buffer (buffer_index) <= signed(std_logic_vector(x_in));
 
         -- Calcular la salida filtrada usando el buffer circular
         acc <= (others => '0');  -- Reiniciar el acumulador
+        produts <= (others => (others => '0'));  -- Reiniciar los productos
+
         for i in 0 to C_TAPS - 1 loop
+
+          produts(i) <= circular_buffer((buffer_index - i + C_TAPS) mod C_TAPS) * COEFF(i);
                     
-          acc <= acc + signed (COEFF(i)) * signed(circular_buffer((buffer_index - i + C_TAPS) mod C_TAPS));
+          acc <= acc + resize(produts(i), C_DATA_W * 2);
 
         end loop;
 
@@ -96,8 +110,7 @@ begin
         buffer_index <= (buffer_index + 1) mod C_TAPS;
 
         -- Asignación de la salida truncada a los bits correctos
-        --y_out <= unsigned (std_logic_vector (acc (C_DATA_W - 1 downto 0)));
-        y_out <= unsigned (std_logic_vector (resize(shift_right(acc,12),12)));
+        y_out <= unsigned (std_logic_vector (resize(shift_right(acc,13),12)));
 
       end if;
         
