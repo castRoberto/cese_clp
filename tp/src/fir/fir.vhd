@@ -7,19 +7,15 @@ use IEEE.numeric_std.all;
 entity fir is
 
   generic (
-	    C_TAPS    : natural := 8; -- Cantidad de taps del filtro FIR
-	    C_DATA_W  : natural := 12 -- Cantidad de bits del dato de entrada y salida
+	  C_DATA_W  : natural := 12
 	);
-
-  -- El numero de TAPs se calcula como 4 / delta(f)
-  -- deltas(f) = (f_cut - f_pass) / f_s = (8KHz - 3.8KHz) / 8KHz = 0.525
-  -- TAPS = 4 / 0.525 = 7.61 ~ 8
 
   port (
     clk     : in std_logic;
+    fsclk   : in std_logic;
     rst     : in std_logic;
     x_in    : in unsigned (C_DATA_W - 1 downto 0);
-    y_out   : out unsigned (C_DATA_W - 1 downto 0)
+    y_out   : out unsigned (C_DATA_W * 2 - 1 downto 0)
   );
 
 end fir;
@@ -28,92 +24,147 @@ end fir;
 
 architecture fir_arc of fir is
 
-  type t_coef_array is array (0 to C_TAPS - 1)
+  constant C_TAPS : natural := 51;  -- número de coeficientes
+
+  type state_machine is (idle_st, active_st);
+
+  type t_data_array is array (0 to C_TAPS - 1)
                      of signed (C_DATA_W - 1 downto 0);
 
-  type t_prod_array is array (0 to C_TAPS - 1)
-                     of signed (C_DATA_W * 2 - 1 downto 0); -- 12 bits + 12 bits = 24 bits
+  signal delay_line : t_data_array := (others => (others => '0'));
 
-  constant COEFF : t_coef_array :=
-    (X"00E",    -- Coef 0
-     X"09B",    -- Coef 1
-     X"293",    -- Coef 2
-     X"4C1",    -- Coef 3
-     X"4C1",    -- Coef 4
-     X"293",    -- Coef 5
-     X"09B",    -- Coef 6
-     X"00E");   -- Coef 7
+  signal coeffs : t_data_array := (
+    to_signed( 105, C_DATA_W),
+    to_signed(  74, C_DATA_W),
+    to_signed(-112, C_DATA_W),
+    to_signed( -53, C_DATA_W),
+    to_signed(  -5, C_DATA_W),
+    to_signed( -76, C_DATA_W),
+    to_signed(   2, C_DATA_W),
+    to_signed( -30, C_DATA_W),
+    to_signed( -40, C_DATA_W),
+    to_signed(  22, C_DATA_W),
+    to_signed( -54, C_DATA_W),
+    to_signed(  10, C_DATA_W),
+    to_signed(   0, C_DATA_W),
+    to_signed( -50, C_DATA_W),
+    to_signed(  51, C_DATA_W),
+    to_signed( -52, C_DATA_W),
+    to_signed(   3, C_DATA_W),
+    to_signed(  41, C_DATA_W),
+    to_signed( -92, C_DATA_W),
+    to_signed(  94, C_DATA_W),
+    to_signed( -54, C_DATA_W),
+    to_signed( -50, C_DATA_W),
+    to_signed( 181, C_DATA_W),
+    to_signed(-324, C_DATA_W),
+    to_signed( 423, C_DATA_W),
+    to_signed(1583, C_DATA_W),
+    to_signed( 423, C_DATA_W),
+    to_signed(-324, C_DATA_W),
+    to_signed( 181, C_DATA_W),
+    to_signed( -50, C_DATA_W),
+    to_signed( -54, C_DATA_W),
+    to_signed(  94, C_DATA_W),
+    to_signed( -92, C_DATA_W),
+    to_signed(  41, C_DATA_W),
+    to_signed(   3, C_DATA_W),
+    to_signed( -52, C_DATA_W),
+    to_signed(  51, C_DATA_W),
+    to_signed( -50, C_DATA_W),
+    to_signed(   0, C_DATA_W),
+    to_signed(  10, C_DATA_W),
+    to_signed( -54, C_DATA_W),
+    to_signed(  22, C_DATA_W),
+    to_signed( -40, C_DATA_W),
+    to_signed( -30, C_DATA_W),
+    to_signed(   2, C_DATA_W),
+    to_signed( -76, C_DATA_W),
+    to_signed(  -5, C_DATA_W),
+    to_signed( -53, C_DATA_W),
+    to_signed(-112, C_DATA_W),
+    to_signed(  74, C_DATA_W),
+    to_signed( 105, C_DATA_W)
+  );
 
-  signal produts : t_prod_array := (others => (others => '0'));
+  signal state : state_machine := idle_st;
 
-  -- Buffer circular para almacenar las muestras de entrada
-  --
-  type t_buffer is array (0 to C_TAPS - 1) of signed (C_DATA_W - 1 downto 0);
+  signal counter : integer range 0 to C_TAPS - 1 := C_TAPS - 1;
 
-  signal circular_buffer : t_buffer;
+  signal output : signed (C_DATA_W * 2 - 1 downto 0) := (others=>'0');
 
-  -- indice del buffer circular
-  --
-  signal buffer_index : integer range 0 to C_TAPS - 1 := 0;
+  signal accumulator : signed (C_DATA_W * 2 - 1 downto 0) := (others=>'0');
 
-  -- Acumulador para la salida
-  --
-  signal acc : signed (C_DATA_W * 2 downto 0); -- 12 bits + 12 bits + 1 = 25 bits
-
-  signal enable : std_logic;
+  signal fsclk_q : std_logic := '0';
 
 begin
 
-  gen_ena_inst: entity work.gen_ena
-    generic map (
-      N => 12500 -- 12500 = 125MHz(fpga clk) / 10kHz(Fs)
-	)
-    port map (
-      clk_i => clk,
-      rst_i => rst,
-      ena_i => '1',
-      q_o	=> enable
-	);
+  --
+  y_out <= unsigned (std_logic_vector(output));
 
+  --
   fir : process (clk)
+
+    variable sum_v : signed (C_DATA_W * 2 - 1 downto 0) := (others=>'0');
 
   begin
 
     if rising_edge(clk) then
 
-      if rst = '1' then
+      fsclk_q <= fsclk;
 
-        circular_buffer <= (others => (others => '0'));
-        acc <= (others => '0');
-        produts <= (others => (others => '0'));
-        y_out <= (others => '0');
-        buffer_index <= 0;
+      case state is
 
-      elsif enable = '1' then
+        when idle_st =>
 
-        -- Almacenar la nueva muestra en el buffer circular
-        circular_buffer (buffer_index) <= signed(std_logic_vector(x_in));
+          if fsclk = '1' and fsclk_q = '0' then
 
-        -- Calcular la salida filtrada usando el buffer circular
-        acc <= (others => '0');  -- Reiniciar el acumulador
-        produts <= (others => (others => '0'));  -- Reiniciar los productos
+            state <= active_st;
 
-        for i in 0 to C_TAPS - 1 loop
+          end if;
 
-          produts(i) <= circular_buffer((buffer_index - i + C_TAPS) mod C_TAPS) * COEFF(i);
-                    
-          acc <= acc + resize(produts(i), C_DATA_W * 2);
+        when active_st =>
 
-        end loop;
+          if counter > 0 then
 
-        -- Actualizar el índice del buffer circular
-        buffer_index <= (buffer_index + 1) mod C_TAPS;
+            counter <= counter - 1;
 
-        -- Asignación de la salida truncada a los bits correctos
-        y_out <= unsigned (std_logic_vector (resize(shift_right(acc,13),12)));
+          else
 
-      end if;
-        
+            counter <= C_TAPS - 1;
+            state <= idle_st;
+
+          end if;
+
+          -- Shifting the delay line
+          --
+          if counter > 0 then
+
+            delay_line (counter) <= delay_line (counter - 1);
+
+          else
+
+            delay_line (counter) <= signed (std_logic_vector (x_in));
+
+          end if;
+
+          -- Multiplying the delay line with coefficients
+          --
+          if counter > 0 then
+
+            sum_v := delay_line (counter) * coeffs (counter);
+            accumulator <= accumulator + sum_v;
+
+          else
+
+            accumulator <= (others=>'0');
+            sum_v := delay_line (counter) * coeffs (counter);
+            output <= accumulator + sum_v;
+
+          end if;
+
+      end case;
+
     end if;
 
   end process;

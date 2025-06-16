@@ -5,7 +5,7 @@ buff_index = 2
 
 for i in range (5):
     print (f"chatgpt: \t{(buff_index - i + 5) % 5}, \tyo: \t{(buff_index + i) % 5}")
-    
+
 """
 import numpy as np
 from scipy.signal import firwin
@@ -31,10 +31,10 @@ import matplotlib.pyplot as plt
 from scipy.signal import firwin, freqz
 
 # Parámetros del diseño del filtro
-fs = 40000  # Frecuencia de muestreo en Hz (20 kHz)
+fs = 8000  # Frecuencia de muestreo en Hz (20 kHz)
 f_pass = 3800  # Frecuencia de paso en Hz (3.8 kHz)
-f_stop = 6000  # Frecuencia de stop en Hz (6 kHz)
-num_taps = 100  # Número de coeficientes (taps) del filtro
+f_stop = 4300  # Frecuencia de stop en Hz (6 kHz)
+num_taps = 64  # Número de coeficientes (taps) del filtro
 
 # Diseño del filtro FIR usando una ventana de Hamming
 # La frecuencia de corte normalizada es calculada en relación a la frecuencia de muestreo
@@ -58,7 +58,7 @@ plt.title('Respuesta en frecuencia del filtro FIR')
 plt.xlabel('Frecuencia (Hz)')
 plt.ylabel('Magnitud (dB)')
 plt.axvline(f_pass, color='green', linestyle='--', label='Frecuencia de paso (3.8 kHz)')
-plt.axvline(f_stop, color='red', linestyle='--', label='Frecuencia de stop (6 kHz)')
+plt.axvline(f_stop, color='red', linestyle='--', label='Frecuencia de stop (4.3 kHz)')
 plt.axhline(-40, color='gray', linestyle='--', label='Atenuación de -40 dB')
 plt.grid()
 plt.legend()

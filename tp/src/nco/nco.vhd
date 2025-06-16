@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------
 ----                                                                      ----
 ----  NCO (Numerically Controlled Oscilator)                              ----
-----                                                                      ----                                                                        ----
+----                                                                      ----
 ------------------------------------------------------------------------------
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -25,7 +25,7 @@ entity nco is
 end;
 
 architecture p of nco is
-	
+
 	-- Componente que devuelve el valor del seno/coseno para un determinado angulo
 	component sin_cos is
 		generic(
@@ -39,7 +39,7 @@ architecture p of nco is
 			cos_o : out unsigned(DATA_W-2 downto 0)           -- salida del coseno (se sale con N-2 bits)
 		);
 	end component sin_cos;
-	
+
 	-- Componente que acumula la fase
 	component acum_fase is
 		generic(
@@ -55,7 +55,7 @@ architecture p of nco is
 	end component acum_fase;
 
 	signal acum_reg_sal: std_logic_vector(ADDR_W-1 downto 0);
-	
+
 begin
 	af: acum_fase
 		generic map(
@@ -68,7 +68,7 @@ begin
 			paso,
 			acum_reg_sal
 		);
-		
+
 	ss: sin_cos
 		generic map(
 			DATA_W,

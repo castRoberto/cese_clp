@@ -1,0 +1,351 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+Eacum_fase
+Z0 w1749647346
+Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/LSE/bimester5/cese_clp/tp/sim
+Z6 8C:/LSE/bimester5/cese_clp/tp/src/nco/acum_fase.vhd
+Z7 FC:/LSE/bimester5/cese_clp/tp/src/nco/acum_fase.vhd
+l0
+L11
+VS7M[2lT2h8SK_cPh7?9BE2
+!s100 QOLe_ZFWDABGhCI6N9IR:0
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1749849510
+!i10b 1
+Z10 !s108 1749849510.000000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/nco/acum_fase.vhd|
+Z12 !s107 C:/LSE/bimester5/cese_clp/tp/src/nco/acum_fase.vhd|
+!i113 1
+Z13 o-work work -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Abeh
+R1
+R2
+R3
+R4
+DEx4 work 9 acum_fase 0 22 S7M[2lT2h8SK_cPh7?9BE2
+l30
+L24
+V>QJF_C2]eE^4h1BhL6A5V3
+!s100 X0;jCQ_Y?0`VB?KcWin<[3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Efir
+Z15 w1749849497
+R2
+R3
+R4
+R5
+Z16 8C:/LSE/bimester5/cese_clp/tp/src/fir/fir.vhd
+Z17 FC:/LSE/bimester5/cese_clp/tp/src/fir/fir.vhd
+l0
+L5
+VBiI5gcK_QnQS0_9`Hh7g83
+!s100 o@ZB[_52W?1Jo6Tk9nQg`2
+R8
+32
+R9
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/fir/fir.vhd|
+Z19 !s107 C:/LSE/bimester5/cese_clp/tp/src/fir/fir.vhd|
+!i113 1
+R13
+R14
+Afir_arc
+R2
+R3
+R4
+Z20 DEx4 work 3 fir 0 22 BiI5gcK_QnQS0_9`Hh7g83
+l55
+L18
+VfG]QAS9=`H1MnkTH;7_4V0
+!s100 >59@XRBGh6828[Vg`[ZgK0
+R8
+32
+R9
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Egen_ena
+R0
+R3
+R4
+R5
+Z21 8C:/LSE/bimester5/cese_clp/tp/src/libs/gen_ena.vhd
+Z22 FC:/LSE/bimester5/cese_clp/tp/src/libs/gen_ena.vhd
+l0
+L4
+V]JQ@^3VzV1f<5LP=A6T^?3
+!s100 ^@;HjFVRM^TG[SGWiLALd3
+R8
+32
+R9
+!i10b 1
+R10
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/libs/gen_ena.vhd|
+Z24 !s107 C:/LSE/bimester5/cese_clp/tp/src/libs/gen_ena.vhd|
+!i113 1
+R13
+R14
+Agen_ena_arch
+R3
+R4
+Z25 DEx4 work 7 gen_ena 0 22 ]JQ@^3VzV1f<5LP=A6T^?3
+l22
+L20
+Vh6U?EUnBB4I0?;jI5Umh<3
+!s100 T3:R50PG<MmYbe0<I:<T51
+R8
+32
+R9
+!i10b 1
+R10
+R23
+R24
+!i113 1
+R13
+R14
+Enco
+R0
+R1
+R2
+R3
+R4
+R5
+Z26 8C:/LSE/bimester5/cese_clp/tp/src/nco/nco.vhd
+Z27 FC:/LSE/bimester5/cese_clp/tp/src/nco/nco.vhd
+l0
+L11
+V3gjeNN3CMXDIFL0iX<F>90
+!s100 7R:W:f[hbU4Gg2bSlkKR?3
+R8
+32
+Z28 !s110 1749849511
+!i10b 1
+Z29 !s108 1749849511.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/nco/nco.vhd|
+Z31 !s107 C:/LSE/bimester5/cese_clp/tp/src/nco/nco.vhd|
+!i113 1
+R13
+R14
+Ap
+R1
+R2
+R3
+R4
+Z32 DEx4 work 3 nco 0 22 3gjeNN3CMXDIFL0iX<F>90
+l59
+L27
+Vlg_af>gShh=RDLffh;_ba1
+!s100 0aY;hZ?=]RQ_lXd>M?AE80
+R8
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R13
+R14
+Enco_test
+Z33 w1749848885
+R1
+R2
+R3
+R4
+R5
+Z34 8C:/LSE/bimester5/cese_clp/tp/src/test/nco_test.vhd
+Z35 FC:/LSE/bimester5/cese_clp/tp/src/test/nco_test.vhd
+l0
+L6
+V@@McRf2=Qobb6Al]^DQKg2
+!s100 P]ahZeiNZQ8UeKdg<_O[W3
+R8
+32
+R28
+!i10b 1
+R29
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/test/nco_test.vhd|
+Z37 !s107 C:/LSE/bimester5/cese_clp/tp/src/test/nco_test.vhd|
+!i113 1
+R13
+R14
+Ap
+R20
+R32
+R25
+R1
+R2
+R3
+R4
+Z38 DEx4 work 8 nco_test 0 22 @@McRf2=Qobb6Al]^DQKg2
+l28
+L9
+Z39 V<:7nIYB<[T[nYc1H<_Ve12
+Z40 !s100 Nc]`Q7bkE[R5W5U9eTI721
+R8
+32
+R28
+!i10b 1
+R29
+R36
+R37
+!i113 1
+R13
+R14
+Esimple_test
+Z41 w1749848889
+R1
+R2
+R3
+R4
+R5
+Z42 8C:/LSE/bimester5/cese_clp/tp/src/test/simple_test.vhd
+Z43 FC:/LSE/bimester5/cese_clp/tp/src/test/simple_test.vhd
+l0
+L6
+VnWMg^jM<W=FjzQLzT8l7]0
+!s100 KZlMc0R>QEF0<2foP^1m=3
+R8
+32
+R28
+!i10b 1
+R29
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/test/simple_test.vhd|
+Z45 !s107 C:/LSE/bimester5/cese_clp/tp/src/test/simple_test.vhd|
+!i113 1
+R13
+R14
+Ap
+R20
+R25
+R1
+R2
+R3
+R4
+DEx4 work 11 simple_test 0 22 nWMg^jM<W=FjzQLzT8l7]0
+l43
+L9
+VibOFjCj`6E13:FQ<O=;]63
+!s100 hNW;b3j[h4DG:5ChZnTHI1
+R8
+32
+R28
+!i10b 1
+R29
+R44
+R45
+!i113 1
+R13
+R14
+Esin_cos
+R0
+R2
+R3
+R4
+R5
+Z46 8C:/LSE/bimester5/cese_clp/tp/src/nco/sin_cos.vhd
+Z47 FC:/LSE/bimester5/cese_clp/tp/src/nco/sin_cos.vhd
+l0
+L5
+VnM_NPn[XH;[EdB1hXVE@D3
+!s100 zgZ58_<9AGLN`MC>BZN`o1
+R8
+32
+R28
+!i10b 1
+R29
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/nco/sin_cos.vhd|
+Z49 !s107 C:/LSE/bimester5/cese_clp/tp/src/nco/sin_cos.vhd|
+!i113 1
+R13
+R14
+Artl
+R2
+R3
+R4
+DEx4 work 7 sin_cos 0 22 nM_NPn[XH;[EdB1hXVE@D3
+l43
+L18
+VH2oX;P7CVhlLB:f;c:LTB0
+!s100 gDcCTYO4T9SHizO;JReN23
+R8
+32
+R28
+!i10b 1
+R29
+R48
+R49
+!i113 1
+R13
+R14
+Esin_rom
+R0
+R1
+R2
+R3
+R4
+R5
+Z50 8C:/LSE/bimester5/cese_clp/tp/src/nco/sin_rom.vhd
+Z51 FC:/LSE/bimester5/cese_clp/tp/src/nco/sin_rom.vhd
+l0
+L11
+VG_0NodMBX9Q4]HboGUh_Z2
+!s100 UdfPYF[H>oXYiS4Jol[Ml3
+R8
+32
+R9
+!i10b 1
+R10
+Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/LSE/bimester5/cese_clp/tp/src/nco/sin_rom.vhd|
+Z53 !s107 C:/LSE/bimester5/cese_clp/tp/src/nco/sin_rom.vhd|
+!i113 1
+R13
+R14
+Axilinx
+R1
+R2
+R3
+R4
+DEx4 work 7 sin_rom 0 22 G_0NodMBX9Q4]HboGUh_Z2
+l58
+L25
+VYM9[TU1DJGf`8j2PeNoSz0
+!s100 GU?9iBIHmc^<:SjfR54>k2
+R8
+32
+R9
+!i10b 1
+R10
+R52
+R53
+!i113 1
+R13
+R14

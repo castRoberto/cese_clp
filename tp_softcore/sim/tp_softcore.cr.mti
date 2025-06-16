@@ -1,0 +1,38 @@
+C:/LSE/bimester5/cese_clp/tp_softcore/src/sin_gen.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/LSE/bimester5/cese_clp/tp_softcore/src/sin_gen.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling entity sin_gen
+-- Compiling architecture sin_gen_arch of sin_gen
+** Warning: C:/LSE/bimester5/cese_clp/tp_softcore/src/sin_gen.vhd(40): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+} {} {}} C:/LSE/bimester5/cese_clp/tp_softcore/src/nco.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/LSE/bimester5/cese_clp/tp_softcore/src/nco.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity nco
+-- Compiling architecture nco_arch of nco
+-- Loading entity gen_ena
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading entity sin_gen
+
+} {} {}} C:/LSE/bimester5/cese_clp/tp_softcore/src/gen_ena.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/LSE/bimester5/cese_clp/tp_softcore/src/gen_ena.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity gen_ena
+-- Compiling architecture gen_ena_arch of gen_ena
+
+} {} {}}
