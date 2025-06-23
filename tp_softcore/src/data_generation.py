@@ -12,12 +12,23 @@ def generate_data (n):
 
 #
 with open(file_name, 'w') as file:
+  
+  new_line = 1
 
   for index in range (N):
 
     val = generate_data (index / N)
     data_generated.append(val)
-    file.write (f'{float_to_q15_hex (val)}\n')
+    
+    if new_line == 8:
+      
+      file.write (f"X\"{float_to_q15_hex (val)}\",\n")
+      new_line = 1
+      
+    else:
+      
+      file.write (f"X\"{float_to_q15_hex (val)}\", ")
+      new_line += 1
     #file.write (f'{float_to_q1_6_hex (val)}\n')
 
   print("Máximo valor:", max(data_generated))

@@ -1,0 +1,216 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.math_real.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_textio.all;
+use std.textio.all;
+
+--==========================================================================
+
+entity sin_gen is
+
+  generic (
+    DATA_WIDTH : natural := 16;
+    RAM_DEPTH  : natural := 2**16;
+    STEP_WIDTH : natural := 4
+  );
+
+  port(
+    i_clock   : in  std_logic;
+    i_step    : in  unsigned (STEP_WIDTH - 1 downto 0) := (others => '0');
+    o_signal  : out std_logic_vector(DATA_WIDTH - 1 downto 0)
+  );
+
+end sin_gen;
+
+--==========================================================================
+
+architecture sin_gen_arch of sin_gen is
+
+  type ram_t is array (0 to RAM_DEPTH - 1) of std_logic_vector(DATA_WIDTH - 1 downto 0);
+
+  signal index : unsigned (DATA_WIDTH - 1 downto 0) := (others => '0');
+
+  --==========================================================================
+
+  --impure function f_get_data (RamFileName : in string) return ram_t is
+--
+  --  FILE RamFile : text is in RamFileName;
+  --  variable RamFileLine : line;
+  --  variable RAM : ram_t;
+--
+  --begin
+--
+  --  for I in ram_t'range loop
+--
+  --    readline (RamFile, RamFileLine);
+  --    hread (RamFileLine, RAM(I));
+--
+  --  end loop;
+--
+  --  return RAM;
+--
+  --end function;
+
+  --==========================================================================
+
+  --signal RAM : ram_t :=
+  --  f_get_data (RamFileName => "C:/LSE/cese_clp/tp_softcore/src/sine.txt");
+  signal RAM : ram_t := (
+    X"0000", X"0079", X"00F1", X"016A", X"01E3", X"025B", X"02D4", X"034C",
+    X"03C5", X"043D", X"04B6", X"052E", X"05A6", X"061F", X"0697", X"070F",
+    X"0787", X"07FF", X"0877", X"08EF", X"0967", X"09DE", X"0A56", X"0ACD",
+    X"0B45", X"0BBC", X"0C33", X"0CAA", X"0D21", X"0D98", X"0E0F", X"0E85",
+    X"0EFC", X"0F72", X"0FE8", X"105E", X"10D4", X"1149", X"11BF", X"1234",
+    X"12A9", X"131E", X"1393", X"1407", X"147C", X"14F0", X"1564", X"15D8",
+    X"164B", X"16BF", X"1732", X"17A5", X"1817", X"188A", X"18FC", X"196E",
+    X"19E0", X"1A51", X"1AC2", X"1B33", X"1BA4", X"1C14", X"1C84", X"1CF4",
+    X"1D64", X"1DD3", X"1E42", X"1EB1", X"1F1F", X"1F8E", X"1FFB", X"2069",
+    X"20D6", X"2143", X"21B0", X"221C", X"2288", X"22F3", X"235F", X"23C9",
+    X"2434", X"249E", X"2508", X"2572", X"25DB", X"2644", X"26AC", X"2714",
+    X"277C", X"27E3", X"284A", X"28B0", X"2916", X"297C", X"29E2", X"2A46",
+    X"2AAB", X"2B0F", X"2B73", X"2BD6", X"2C39", X"2C9B", X"2CFD", X"2D5F",
+    X"2DC0", X"2E21", X"2E81", X"2EE1", X"2F40", X"2F9F", X"2FFD", X"305B",
+    X"30B9", X"3116", X"3172", X"31CE", X"322A", X"3285", X"32E0", X"333A",
+    X"3393", X"33ED", X"3445", X"349D", X"34F5", X"354C", X"35A3", X"35F9",
+    X"364E", X"36A3", X"36F8", X"374C", X"379F", X"37F2", X"3845", X"3896",
+    X"38E8", X"3938", X"3989", X"39D8", X"3A27", X"3A76", X"3AC4", X"3B11",
+    X"3B5E", X"3BAA", X"3BF6", X"3C41", X"3C8C", X"3CD5", X"3D1F", X"3D68",
+    X"3DB0", X"3DF7", X"3E3E", X"3E85", X"3ECA", X"3F10", X"3F54", X"3F98",
+    X"3FDB", X"401E", X"4060", X"40A2", X"40E2", X"4123", X"4162", X"41A1",
+    X"41E0", X"421D", X"425A", X"4297", X"42D3", X"430E", X"4348", X"4382",
+    X"43BB", X"43F4", X"442C", X"4463", X"449A", X"44CF", X"4505", X"4539",
+    X"456D", X"45A0", X"45D3", X"4605", X"4636", X"4667", X"4697", X"46C6",
+    X"46F4", X"4722", X"474F", X"477C", X"47A7", X"47D2", X"47FD", X"4827",
+    X"4850", X"4878", X"489F", X"48C6", X"48EC", X"4912", X"4937", X"495B",
+    X"497E", X"49A1", X"49C3", X"49E4", X"4A05", X"4A24", X"4A44", X"4A62",
+    X"4A80", X"4A9D", X"4AB9", X"4AD4", X"4AEF", X"4B09", X"4B23", X"4B3B",
+    X"4B53", X"4B6A", X"4B81", X"4B96", X"4BAB", X"4BC0", X"4BD3", X"4BE6",
+    X"4BF8", X"4C09", X"4C1A", X"4C2A", X"4C39", X"4C47", X"4C55", X"4C62",
+    X"4C6E", X"4C7A", X"4C84", X"4C8E", X"4C98", X"4CA0", X"4CA8", X"4CAF",
+    X"4CB5", X"4CBB", X"4CBF", X"4CC4", X"4CC7", X"4CC9", X"4CCB", X"4CCC",
+    X"4CCD", X"4CCC", X"4CCB", X"4CC9", X"4CC7", X"4CC4", X"4CBF", X"4CBB",
+    X"4CB5", X"4CAF", X"4CA8", X"4CA0", X"4C98", X"4C8E", X"4C84", X"4C7A",
+    X"4C6E", X"4C62", X"4C55", X"4C47", X"4C39", X"4C2A", X"4C1A", X"4C09",
+    X"4BF8", X"4BE6", X"4BD3", X"4BC0", X"4BAB", X"4B96", X"4B81", X"4B6A",
+    X"4B53", X"4B3B", X"4B23", X"4B09", X"4AEF", X"4AD4", X"4AB9", X"4A9D",
+    X"4A80", X"4A62", X"4A44", X"4A24", X"4A05", X"49E4", X"49C3", X"49A1",
+    X"497E", X"495B", X"4937", X"4912", X"48EC", X"48C6", X"489F", X"4878",
+    X"4850", X"4827", X"47FD", X"47D2", X"47A7", X"477C", X"474F", X"4722",
+    X"46F4", X"46C6", X"4697", X"4667", X"4636", X"4605", X"45D3", X"45A0",
+    X"456D", X"4539", X"4505", X"44CF", X"449A", X"4463", X"442C", X"43F4",
+    X"43BB", X"4382", X"4348", X"430E", X"42D3", X"4297", X"425A", X"421D",
+    X"41E0", X"41A1", X"4162", X"4123", X"40E2", X"40A2", X"4060", X"401E",
+    X"3FDB", X"3F98", X"3F54", X"3F10", X"3ECA", X"3E85", X"3E3E", X"3DF7",
+    X"3DB0", X"3D68", X"3D1F", X"3CD5", X"3C8C", X"3C41", X"3BF6", X"3BAA",
+    X"3B5E", X"3B11", X"3AC4", X"3A76", X"3A27", X"39D8", X"3989", X"3938",
+    X"38E8", X"3896", X"3845", X"37F2", X"379F", X"374C", X"36F8", X"36A3",
+    X"364E", X"35F9", X"35A3", X"354C", X"34F5", X"349D", X"3445", X"33ED",
+    X"3393", X"333A", X"32E0", X"3285", X"322A", X"31CE", X"3172", X"3116",
+    X"30B9", X"305B", X"2FFD", X"2F9F", X"2F40", X"2EE1", X"2E81", X"2E21",
+    X"2DC0", X"2D5F", X"2CFD", X"2C9B", X"2C39", X"2BD6", X"2B73", X"2B0F",
+    X"2AAB", X"2A46", X"29E2", X"297C", X"2916", X"28B0", X"284A", X"27E3",
+    X"277C", X"2714", X"26AC", X"2644", X"25DB", X"2572", X"2508", X"249E",
+    X"2434", X"23C9", X"235F", X"22F3", X"2288", X"221C", X"21B0", X"2143",
+    X"20D6", X"2069", X"1FFB", X"1F8E", X"1F1F", X"1EB1", X"1E42", X"1DD3",
+    X"1D64", X"1CF4", X"1C84", X"1C14", X"1BA4", X"1B33", X"1AC2", X"1A51",
+    X"19E0", X"196E", X"18FC", X"188A", X"1817", X"17A5", X"1732", X"16BF",
+    X"164B", X"15D8", X"1564", X"14F0", X"147C", X"1407", X"1393", X"131E",
+    X"12A9", X"1234", X"11BF", X"1149", X"10D4", X"105E", X"0FE8", X"0F72",
+    X"0EFC", X"0E85", X"0E0F", X"0D98", X"0D21", X"0CAA", X"0C33", X"0BBC",
+    X"0B45", X"0ACD", X"0A56", X"09DE", X"0967", X"08EF", X"0877", X"07FF",
+    X"0787", X"070F", X"0697", X"061F", X"05A6", X"052E", X"04B6", X"043D",
+    X"03C5", X"034C", X"02D4", X"025B", X"01E3", X"016A", X"00F1", X"0079",
+    X"0000", X"FF87", X"FF0F", X"FE96", X"FE1D", X"FDA5", X"FD2C", X"FCB4",
+    X"FC3B", X"FBC3", X"FB4A", X"FAD2", X"FA5A", X"F9E1", X"F969", X"F8F1",
+    X"F879", X"F801", X"F789", X"F711", X"F699", X"F622", X"F5AA", X"F533",
+    X"F4BB", X"F444", X"F3CD", X"F356", X"F2DF", X"F268", X"F1F1", X"F17B",
+    X"F104", X"F08E", X"F018", X"EFA2", X"EF2C", X"EEB7", X"EE41", X"EDCC",
+    X"ED57", X"ECE2", X"EC6D", X"EBF9", X"EB84", X"EB10", X"EA9C", X"EA28",
+    X"E9B5", X"E941", X"E8CE", X"E85B", X"E7E9", X"E776", X"E704", X"E692",
+    X"E620", X"E5AF", X"E53E", X"E4CD", X"E45C", X"E3EC", X"E37C", X"E30C",
+    X"E29C", X"E22D", X"E1BE", X"E14F", X"E0E1", X"E072", X"E005", X"DF97",
+    X"DF2A", X"DEBD", X"DE50", X"DDE4", X"DD78", X"DD0D", X"DCA1", X"DC37",
+    X"DBCC", X"DB62", X"DAF8", X"DA8E", X"DA25", X"D9BC", X"D954", X"D8EC",
+    X"D884", X"D81D", X"D7B6", X"D750", X"D6EA", X"D684", X"D61E", X"D5BA",
+    X"D555", X"D4F1", X"D48D", X"D42A", X"D3C7", X"D365", X"D303", X"D2A1",
+    X"D240", X"D1DF", X"D17F", X"D11F", X"D0C0", X"D061", X"D003", X"CFA5",
+    X"CF47", X"CEEA", X"CE8E", X"CE32", X"CDD6", X"CD7B", X"CD20", X"CCC6",
+    X"CC6D", X"CC13", X"CBBB", X"CB63", X"CB0B", X"CAB4", X"CA5D", X"CA07",
+    X"C9B2", X"C95D", X"C908", X"C8B4", X"C861", X"C80E", X"C7BB", X"C76A",
+    X"C718", X"C6C8", X"C677", X"C628", X"C5D9", X"C58A", X"C53C", X"C4EF",
+    X"C4A2", X"C456", X"C40A", X"C3BF", X"C374", X"C32B", X"C2E1", X"C298",
+    X"C250", X"C209", X"C1C2", X"C17B", X"C136", X"C0F0", X"C0AC", X"C068",
+    X"C025", X"BFE2", X"BFA0", X"BF5E", X"BF1E", X"BEDD", X"BE9E", X"BE5F",
+    X"BE20", X"BDE3", X"BDA6", X"BD69", X"BD2D", X"BCF2", X"BCB8", X"BC7E",
+    X"BC45", X"BC0C", X"BBD4", X"BB9D", X"BB66", X"BB31", X"BAFB", X"BAC7",
+    X"BA93", X"BA60", X"BA2D", X"B9FB", X"B9CA", X"B999", X"B969", X"B93A",
+    X"B90C", X"B8DE", X"B8B1", X"B884", X"B859", X"B82E", X"B803", X"B7D9",
+    X"B7B0", X"B788", X"B761", X"B73A", X"B714", X"B6EE", X"B6C9", X"B6A5",
+    X"B682", X"B65F", X"B63D", X"B61C", X"B5FB", X"B5DC", X"B5BC", X"B59E",
+    X"B580", X"B563", X"B547", X"B52C", X"B511", X"B4F7", X"B4DD", X"B4C5",
+    X"B4AD", X"B496", X"B47F", X"B46A", X"B455", X"B440", X"B42D", X"B41A",
+    X"B408", X"B3F7", X"B3E6", X"B3D6", X"B3C7", X"B3B9", X"B3AB", X"B39E",
+    X"B392", X"B386", X"B37C", X"B372", X"B368", X"B360", X"B358", X"B351",
+    X"B34B", X"B345", X"B341", X"B33C", X"B339", X"B337", X"B335", X"B334",
+    X"B333", X"B334", X"B335", X"B337", X"B339", X"B33C", X"B341", X"B345",
+    X"B34B", X"B351", X"B358", X"B360", X"B368", X"B372", X"B37C", X"B386",
+    X"B392", X"B39E", X"B3AB", X"B3B9", X"B3C7", X"B3D6", X"B3E6", X"B3F7",
+    X"B408", X"B41A", X"B42D", X"B440", X"B455", X"B46A", X"B47F", X"B496",
+    X"B4AD", X"B4C5", X"B4DD", X"B4F7", X"B511", X"B52C", X"B547", X"B563",
+    X"B580", X"B59E", X"B5BC", X"B5DC", X"B5FB", X"B61C", X"B63D", X"B65F",
+    X"B682", X"B6A5", X"B6C9", X"B6EE", X"B714", X"B73A", X"B761", X"B788",
+    X"B7B0", X"B7D9", X"B803", X"B82E", X"B859", X"B884", X"B8B1", X"B8DE",
+    X"B90C", X"B93A", X"B969", X"B999", X"B9CA", X"B9FB", X"BA2D", X"BA60",
+    X"BA93", X"BAC7", X"BAFB", X"BB31", X"BB66", X"BB9D", X"BBD4", X"BC0C",
+    X"BC45", X"BC7E", X"BCB8", X"BCF2", X"BD2D", X"BD69", X"BDA6", X"BDE3",
+    X"BE20", X"BE5F", X"BE9E", X"BEDD", X"BF1E", X"BF5E", X"BFA0", X"BFE2",
+    X"C025", X"C068", X"C0AC", X"C0F0", X"C136", X"C17B", X"C1C2", X"C209",
+    X"C250", X"C298", X"C2E1", X"C32B", X"C374", X"C3BF", X"C40A", X"C456",
+    X"C4A2", X"C4EF", X"C53C", X"C58A", X"C5D9", X"C628", X"C677", X"C6C8",
+    X"C718", X"C76A", X"C7BB", X"C80E", X"C861", X"C8B4", X"C908", X"C95D",
+    X"C9B2", X"CA07", X"CA5D", X"CAB4", X"CB0B", X"CB63", X"CBBB", X"CC13",
+    X"CC6D", X"CCC6", X"CD20", X"CD7B", X"CDD6", X"CE32", X"CE8E", X"CEEA",
+    X"CF47", X"CFA5", X"D003", X"D061", X"D0C0", X"D11F", X"D17F", X"D1DF",
+    X"D240", X"D2A1", X"D303", X"D365", X"D3C7", X"D42A", X"D48D", X"D4F1",
+    X"D555", X"D5BA", X"D61E", X"D684", X"D6EA", X"D750", X"D7B6", X"D81D",
+    X"D884", X"D8EC", X"D954", X"D9BC", X"DA25", X"DA8E", X"DAF8", X"DB62",
+    X"DBCC", X"DC37", X"DCA1", X"DD0D", X"DD78", X"DDE4", X"DE50", X"DEBD",
+    X"DF2A", X"DF97", X"E005", X"E072", X"E0E1", X"E14F", X"E1BE", X"E22D",
+    X"E29C", X"E30C", X"E37C", X"E3EC", X"E45C", X"E4CD", X"E53E", X"E5AF",
+    X"E620", X"E692", X"E704", X"E776", X"E7E9", X"E85B", X"E8CE", X"E941",
+    X"E9B5", X"EA28", X"EA9C", X"EB10", X"EB84", X"EBF9", X"EC6D", X"ECE2",
+    X"ED57", X"EDCC", X"EE41", X"EEB7", X"EF2C", X"EFA2", X"F018", X"F08E",
+    X"F104", X"F17B", X"F1F1", X"F268", X"F2DF", X"F356", X"F3CD", X"F444",
+    X"F4BB", X"F533", X"F5AA", X"F622", X"F699", X"F711", X"F789", X"F801",
+    X"F879", X"F8F1", X"F969", X"F9E1", X"FA5A", X"FAD2", X"FB4A", X"FBC3",
+    X"FC3B", X"FCB4", X"FD2C", X"FDA5", X"FE1D", X"FE96", X"FF0F", X"FF87"
+  );
+
+begin
+
+  generador_signal: process (i_clock)
+
+  begin
+
+    if rising_edge (i_clock) then
+
+      if index < RAM_DEPTH then
+
+        o_signal <= (RAM (to_integer (index)));
+        index <= index + i_step;
+
+      else
+
+        index <= (others => '0');
+
+      end if;
+
+     end if;
+
+  end process generador_signal;
+
+end sin_gen_arch;
+
+--==========================================================================

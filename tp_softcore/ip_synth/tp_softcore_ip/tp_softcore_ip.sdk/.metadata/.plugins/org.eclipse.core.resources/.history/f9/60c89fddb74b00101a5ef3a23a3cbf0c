@@ -1,0 +1,18 @@
+/*
+ * main_fir.c
+
+ *
+ *  Created on: 17/06/2025
+ *      Author: rober
+ */
+#include "xparameters.h"
+#include "ip_nco.h"
+#include "xil_io.h"
+
+int main () {
+
+	IP_NCO_mWriteReg (XPAR_IP_NCO_0_S_AXI_BASEADDR, IP_NCO_S_AXI_SLV_REG0_OFFSET, 0x4);
+
+
+	return 0;
+}

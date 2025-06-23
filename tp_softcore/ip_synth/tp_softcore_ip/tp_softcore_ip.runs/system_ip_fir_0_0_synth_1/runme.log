@@ -1,0 +1,520 @@
+
+*** Running vivado
+    with args -log system_ip_fir_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ip_fir_0_0.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source system_ip_fir_0_0.tcl -notrace
+Command: synth_design -top system_ip_fir_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 10424 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 391.047 ; gain = 101.922
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_ip_fir_0_0' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ip/system_ip_fir_0_0/synth/system_ip_fir_0_0.vhd:84]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FREQ_BASE bound to: 125000000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 48000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'ip_fir_v1_0' declared at 'c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0.vhd:5' bound to instance 'U0' of component 'ip_fir_v1_0' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ip/system_ip_fir_0_0/synth/system_ip_fir_0_0.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'ip_fir_v1_0' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0.vhd:54]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FREQ_BASE bound to: 125000000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 48000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FREQ_BASE bound to: 125000000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 48000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'ip_fir_v1_0_S_AXI' declared at 'c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd:5' bound to instance 'ip_fir_v1_0_S_AXI_inst' of component 'ip_fir_v1_0_S_AXI' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'ip_fir_v1_0_S_AXI' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd:91]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FREQ_BASE bound to: 125000000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 48000 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd:228]
+INFO: [Synth 8-226] default block is never used [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd:358]
+INFO: [Synth 8-638] synthesizing module 'fir' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:26]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter FREQ_BASE bound to: 125000000 - type: integer 
+	Parameter SAMPLE_RATE bound to: 48000 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gen_ena' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/gen_ena.vhd:19]
+	Parameter N bound to: 2604 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'gen_ena' (1#1) [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/gen_ena.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'fir' (2#1) [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:26]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd:226]
+INFO: [Synth 8-256] done synthesizing module 'ip_fir_v1_0_S_AXI' (3#1) [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'ip_fir_v1_0' (4#1) [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/hdl/ip_fir_v1_0.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'system_ip_fir_0_0' (5#1) [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ip/system_ip_fir_0_0/synth/system_ip_fir_0_0.vhd:84]
+WARNING: [Synth 8-3331] design ip_fir_v1_0_S_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design ip_fir_v1_0_S_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design ip_fir_v1_0_S_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design ip_fir_v1_0_S_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design ip_fir_v1_0_S_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design ip_fir_v1_0_S_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 445.219 ; gain = 156.094
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 445.219 ; gain = 156.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 445.219 ; gain = 156.094
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 767.098 ; gain = 0.355
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 767.098 ; gain = 477.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 767.098 ; gain = 477.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:35 . Memory (MB): peak = 767.098 ; gain = 477.973
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element sum_2_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:120]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element sum_0_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element x_2_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element x_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element x_4_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element x_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element x_6_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element x_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element y_temp_0_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:124]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 767.098 ; gain = 477.973
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module gen_ena 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fir 
+Detailed RTL Component Info : 
++---Registers : 
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+Module ip_fir_v1_0_S_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:98]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:98]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:99]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:99]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_2_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_2_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:100]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_3_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_3_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:101]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_4_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_4_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:102]
+INFO: [Synth 8-4471] merging register 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_5_reg[15:0]' into 'U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_5_reg[15:0]' [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_2_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_4_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_0_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:108]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:119]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:112]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:121]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_6_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_3_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_5_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_7_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_4_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_6_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_1_reg was removed.  [c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ipshared/0e3c/src/fir.vhd:125]
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg, operation Mode is: (A''*(B:0x427))'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_3_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_4_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_40 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_4_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg, operation Mode is: (PCIN+(ACIN2*(B:0x2a7))')'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_5_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_5_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_20 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_50 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_2_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_6_reg, operation Mode is: (ACIN2*(B:0xf0))'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_6_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_6_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_6_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_6_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_60 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_6_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg, operation Mode is: (PCIN+(ACIN2*(B:0x40))')'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_7_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_7_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_30 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_70 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_3_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_1_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_1_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_1_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_10 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_1_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_0_reg, operation Mode is: (A2*(B:0x40))'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_0_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_0_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_0_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_00 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_0_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg, operation Mode is: (PCIN+(A''*(B:0xf0))')'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_0_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_1_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_00 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_10 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_0_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg, operation Mode is: (ACIN''*(B:0x2a7))'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_1_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_2_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_20 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_2_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg, operation Mode is: (PCIN+(ACIN''*(B:0x427))')'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_2_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_3_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_3_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_10 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/p_30 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/sum_1_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_0_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_0_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_0_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_00 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/y_temp_0_reg.
+DSP Report: Generating DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/output_sum_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register U0/ip_fir_v1_0_S_AXI_inst/fir_inst/output_sum_reg is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/output_sum_reg.
+DSP Report: operator U0/ip_fir_v1_0_S_AXI_inst/fir_inst/output_sum0 is absorbed into DSP U0/ip_fir_v1_0_S_AXI_inst/fir_inst/output_sum_reg.
+WARNING: [Synth 8-3331] design system_ip_fir_0_0 has unconnected port s_axi_awprot[2]
+WARNING: [Synth 8-3331] design system_ip_fir_0_0 has unconnected port s_axi_awprot[1]
+WARNING: [Synth 8-3331] design system_ip_fir_0_0 has unconnected port s_axi_awprot[0]
+WARNING: [Synth 8-3331] design system_ip_fir_0_0 has unconnected port s_axi_arprot[2]
+WARNING: [Synth 8-3331] design system_ip_fir_0_0 has unconnected port s_axi_arprot[1]
+WARNING: [Synth 8-3331] design system_ip_fir_0_0 has unconnected port s_axi_arprot[0]
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/ip_fir_v1_0_S_AXI_inst/aw_en_reg )
+INFO: [Synth 8-3886] merging instance 'U0/ip_fir_v1_0_S_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/ip_fir_v1_0_S_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/ip_fir_v1_0_S_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/ip_fir_v1_0_S_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/ip_fir_v1_0_S_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/ip_fir_v1_0_S_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/aw_en_reg) is unused and will be removed from module system_ip_fir_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/axi_bresp_reg[1]) is unused and will be removed from module system_ip_fir_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/axi_araddr_reg[1]) is unused and will be removed from module system_ip_fir_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/axi_araddr_reg[0]) is unused and will be removed from module system_ip_fir_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/axi_awaddr_reg[1]) is unused and will be removed from module system_ip_fir_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/axi_awaddr_reg[0]) is unused and will be removed from module system_ip_fir_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/ip_fir_v1_0_S_AXI_inst/axi_rresp_reg[1]) is unused and will be removed from module system_ip_fir_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:37 . Memory (MB): peak = 767.098 ; gain = 477.973
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name       | DSP Mapping                 | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir               | (A''*(B:0x427))'            | 16     | 12     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|fir               | (PCIN+(ACIN2*(B:0x2a7))')'  | 16     | 11     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir               | (ACIN2*(B:0xf0))'           | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|fir               | (PCIN+(ACIN2*(B:0x40))')'   | 16     | 8      | -      | -      | 29     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir               | (PCIN+A:B)'                 | 11     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir               | (A2*(B:0x40))'              | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|fir               | (PCIN+(A''*(B:0xf0))')'     | 16     | 9      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|system_ip_fir_0_0 | (ACIN''*(B:0x2a7))'         | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|fir               | (PCIN+(ACIN''*(B:0x427))')' | 16     | 12     | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir               | (PCIN+A:B)'                 | 11     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir               | (PCIN+A:B)'                 | 12     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 843.699 ; gain = 554.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 844.074 ; gain = 554.949
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:52 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|system_ip_fir_0_0 | U0/ip_fir_v1_0_S_AXI_inst/fir_inst/x_2_reg[15] | 3      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++------------------+------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    19|
+|2     |DSP48E1   |     1|
+|3     |DSP48E1_1 |     2|
+|4     |DSP48E1_2 |     1|
+|5     |DSP48E1_3 |     3|
+|6     |DSP48E1_4 |     1|
+|7     |DSP48E1_5 |     1|
+|8     |DSP48E1_6 |     1|
+|9     |DSP48E1_7 |     1|
+|10    |LUT1      |     2|
+|11    |LUT2      |     2|
+|12    |LUT3      |    13|
+|13    |LUT4      |    20|
+|14    |LUT5      |     2|
+|15    |LUT6      |    33|
+|16    |SRL16E    |    16|
+|17    |FDRE      |   232|
+|18    |FDSE      |     2|
++------+----------+------+
+
+Report Instance Areas: 
++------+---------------------------+------------------+------+
+|      |Instance                   |Module            |Cells |
++------+---------------------------+------------------+------+
+|1     |top                        |                  |   352|
+|2     |  U0                       |ip_fir_v1_0       |   352|
+|3     |    ip_fir_v1_0_S_AXI_inst |ip_fir_v1_0_S_AXI |   352|
+|4     |      fir_inst             |fir               |   123|
+|5     |        gen_ena_inst_fir   |gen_ena           |    64|
++------+---------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 55 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:44 . Memory (MB): peak = 855.805 ; gain = 244.801
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 855.805 ; gain = 566.680
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:56 . Memory (MB): peak = 855.805 ; gain = 578.211
+INFO: [Common 17-1381] The checkpoint 'C:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.runs/system_ip_fir_0_0_synth_1/system_ip_fir_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1482] Added synthesis output to IP cache for IP c:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.srcs/sources_1/bd/system/ip/system_ip_fir_0_0/system_ip_fir_0_0.xci
+INFO: [Coretcl 2-1174] Renamed 4 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/LSE/cese_clp/tp_softcore/ip_synth/tp_softcore_ip/tp_softcore_ip.runs/system_ip_fir_0_0_synth_1/system_ip_fir_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_ip_fir_0_0_utilization_synth.rpt -pb system_ip_fir_0_0_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 855.805 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 17 14:50:51 2025...

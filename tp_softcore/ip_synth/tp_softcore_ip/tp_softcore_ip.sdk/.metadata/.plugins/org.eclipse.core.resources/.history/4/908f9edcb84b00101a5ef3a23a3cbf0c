@@ -1,0 +1,52 @@
+/*
+ * main_fir.c
+
+ *
+ *  Created on: 17/06/2025
+ *      Author: rober
+ */
+#include "xparameters.h"
+#include "ip_nco.h"
+#include "xil_io.h"
+#include "xuartps.h"
+
+
+#define UART_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
+
+int main () {
+
+	XUartPs Uart_Ps;
+	int Status;
+	u8 RecvChar;
+
+	xil_printf("Inicio de programa!!!");
+
+	while (1) {
+
+		xil_printf("Inicializando UART...\r\n");
+
+		Status = XUartPs_Initialize(&Uart_Ps, UART_DEVICE_ID);
+		if (Status != XST_SUCCESS) {
+			xil_printf("Error al inicializar UART\r\n");
+			return XST_FAILURE;
+		}
+
+		xil_printf ("Se establece paso en 1");
+
+		IP_NCO_mWriteReg (XPAR_IP_NCO_0_S_AXI_BASEADDR, IP_NCO_S_AXI_SLV_REG0_OFFSET, 0x1);
+
+		while (XUartPs_IsReceiveData(Uart_Ps.Config.BaseAddress) == 0);
+		RecvChar = XUartPs_ReadReg(Uart_Ps.Config.BaseAddress, XUARTPS_FIFO_OFFSET);
+
+		xil_printf("Recibido: %c\r\n", RecvChar);
+
+		// Continuar
+		xil_printf("Continuando...\r\n");
+
+
+
+	}
+
+
+	return 0;
+}

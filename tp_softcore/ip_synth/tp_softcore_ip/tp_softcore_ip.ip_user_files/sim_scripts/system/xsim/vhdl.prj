@@ -1,0 +1,16 @@
+vhdl xil_defaultlib  \
+"../../../bd/system/ipshared/a00e/hdl/ip_nco_v1_0_S_AXI.vhd" \
+"../../../bd/system/ipshared/a00e/hdl/ip_nco_v1_0.vhd" \
+"../../../bd/system/ipshared/a00e/src/gen_ena.vhd" \
+"../../../bd/system/ipshared/a00e/src/sin_gen.vhd" \
+"../../../bd/system/ipshared/a00e/src/nco.vhd" \
+"../../../bd/system/ip/system_ip_nco_0_0/sim/system_ip_nco_0_0.vhd" \
+"../../../bd/system/ip/system_rst_ps7_0_100M_0/sim/system_rst_ps7_0_100M_0.vhd" \
+"../../../bd/system/ip/system_ila_0_0/sim/system_ila_0_0.vhd" \
+"../../../bd/system/sim/system.vhd" \
+"../../../bd/system/ipshared/0e3c/hdl/ip_fir_v1_0_S_AXI.vhd" \
+"../../../bd/system/ipshared/0e3c/src/fir.vhd" \
+"../../../bd/system/ipshared/0e3c/hdl/ip_fir_v1_0.vhd" \
+"../../../bd/system/ip/system_ip_fir_0_0/sim/system_ip_fir_0_0.vhd" \
+
+nosort

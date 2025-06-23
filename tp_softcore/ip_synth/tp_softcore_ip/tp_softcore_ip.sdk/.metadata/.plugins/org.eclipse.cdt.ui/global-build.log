@@ -1,0 +1,733 @@
+15:02:54 **** Build of project fir_app_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ip_fir_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ip_fir_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ip_nco_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ip_nco_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_6/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/ip_fir_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ip_fir_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ip_fir..."
+ip_fir_selftest.c: In function 'IP_FIR_Reg_SelfTest':
+ip_fir_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( IP_FIR_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+ip_fir_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/ip_nco_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ip_nco_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ip_nco..."
+ip_nco_selftest.c: In function 'IP_NCO_Reg_SelfTest':
+ip_nco_selftest.c:52:55: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( IP_NCO_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                       ^~
+ip_nco_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v3_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling sdps"
+xsdps.c: In function 'XSdPs_FrameCmd':
+xsdps.c:1272:11: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    RetVal |= RESP_R1 | (u32)XSDPS_DAT_PRESENT_SEL_MASK;
+xsdps.c:1273:3: note: here
+   case ACMD41:
+   ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_6/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from sleep.c:57:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:60:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:54:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:53:0:
+xtime_l.h:89:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+
+**** Build of configuration Debug for project fir_app ****
+
+Nothing to build for project fir_app
+15:04:17 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fir_app_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\LSE\cese_clp\tp_softcore\ip_synth\tp_softcore_ip\tp_softcore_ip.sdk\fir_app_bsp\ps7_cortexa9_0\libsrc\standalone_v6_6\src/xil-crt0.S:142: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fir_app.elf] Error 1
+15:04:18 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fir_app_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
+C:\LSE\cese_clp\tp_softcore\ip_synth\tp_softcore_ip\tp_softcore_ip.sdk\fir_app_bsp\ps7_cortexa9_0\libsrc\standalone_v6_6\src/xil-crt0.S:142: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fir_app.elf] Error 1
+15:05:05 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  18984	   1144	  22568	  42696	   a6c8	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:12:59 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+In file included from ../src/main_fir.c:9:0:
+../src/main_fir.c: In function 'main':
+../../fir_app_bsp/ps7_cortexa9_0/include/ip_nco.h:35:4: warning: implicit declaration of function 'Xil_Out32' [-Wimplicit-function-declaration]
+    Xil_Out32((BaseAddress) + (RegOffset), (u32)(Data))
+    ^
+../src/main_fir.c:13:2: note: in expansion of macro 'IP_NCO_mWriteReg'
+  IP_NCO_mWriteReg (XPAR_IP_NCO_0_S_AXI_BASEADDR, IP_NCO_S_AXI_SLV_REG0_OFFSET, 0x4);
+  ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main_fir.o: In function `main':
+C:\LSE\cese_clp\tp_softcore\ip_synth\tp_softcore_ip\tp_softcore_ip.sdk\fir_app\Debug/../src/main_fir.c:13: undefined reference to `Xil_Out32'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fir_app.elf] Error 1
+15:14:29 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19048	   1144	  22568	  42760	   a708	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:15:51 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22024	   1144	  22568	  45736	   b2a8	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:17:03 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:22:3: error: 'xil_' undeclared (first use in this function)
+   xil_
+   ^~~~
+../src/main_fir.c:22:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main_fir.c:26:2: error: expected ';' before '}' token
+  }
+  ^
+make: *** [src/main_fir.o] Error 1
+15:17:58 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:22:8: error: 'i' undeclared (first use in this function)
+   for (i=0; i<9999999; i++);
+        ^
+../src/main_fir.c:22:8: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main_fir.o] Error 1
+15:18:11 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22024	   1144	  22568	  45736	   b2a8	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:19:18 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:14:2: error: unknown type name 'XUartPs'
+  XUartPs Uart_Ps;
+  ^~~~~~~
+../src/main_fir.c:16:5: warning: unused variable 'RecvChar' [-Wunused-variable]
+  u8 RecvChar;
+     ^~~~~~~~
+../src/main_fir.c:15:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main_fir.c:14:10: warning: unused variable 'Uart_Ps' [-Wunused-variable]
+  XUartPs Uart_Ps;
+          ^~~~~~~
+make: *** [src/main_fir.o] Error 1
+15:19:29 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:17:5: warning: unused variable 'RecvChar' [-Wunused-variable]
+  u8 RecvChar;
+     ^~~~~~~~
+../src/main_fir.c:16:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main_fir.c:15:10: warning: unused variable 'Uart_Ps' [-Wunused-variable]
+  XUartPs Uart_Ps;
+          ^~~~~~~
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22024	   1144	  22568	  45736	   b2a8	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:19:42 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:20:5: warning: unused variable 'RecvChar' [-Wunused-variable]
+  u8 RecvChar;
+     ^~~~~~~~
+../src/main_fir.c:19:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main_fir.c:18:10: warning: unused variable 'Uart_Ps' [-Wunused-variable]
+  XUartPs Uart_Ps;
+          ^~~~~~~
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22024	   1144	  22568	  45736	   b2a8	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:20:33 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:19:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main_fir.c:30:46: warning: 'Uart_Ps.Config.BaseAddress' is used uninitialized in this function [-Wuninitialized]
+   while (XUartPs_IsReceiveData(Uart_Ps.Config.BaseAddress) == 0);
+                                              ^
+../src/main_fir.c:31:44: warning: 'Uart_Ps.Config.BaseAddress' is used uninitialized in this function [-Wuninitialized]
+   RecvChar = XUartPs_ReadReg(Uart_Ps.Config.BaseAddress, XUARTPS_FIFO_OFFSET);
+                                            ^
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22188	   1144	  22568	  45900	   b34c	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:21:26 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:28:12: warning: implicit declaration of function 'XUartPs_Initialize'; did you mean 'XUartPs_CfgInitialize'? [-Wimplicit-function-declaration]
+   Status = XUartPs_Initialize(&Uart_Ps, UART_DEVICE_ID);
+            ^~~~~~~~~~~~~~~~~~
+            XUartPs_CfgInitialize
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main_fir.o: In function `main':
+C:\LSE\cese_clp\tp_softcore\ip_synth\tp_softcore_ip\tp_softcore_ip.sdk\fir_app\Debug/../src/main_fir.c:28: undefined reference to `XUartPs_Initialize'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fir_app.elf] Error 1
+15:22:59 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:18:2: error: unknown type name 'XUartPs'
+  XUartPs Uart_Ps;
+  ^~~~~~~
+../src/main_fir.c:20:5: warning: unused variable 'RecvChar' [-Wunused-variable]
+  u8 RecvChar;
+     ^~~~~~~~
+../src/main_fir.c:19:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main_fir.c:18:10: warning: unused variable 'Uart_Ps' [-Wunused-variable]
+  XUartPs Uart_Ps;
+          ^~~~~~~
+make: *** [src/main_fir.o] Error 1
+15:23:04 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22176	   1144	  22568	  45888	   b340	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:23:51 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22288	   1144	  22568	  46000	   b3b0	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:24:16 **** Incremental Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: No se hace nada para `main-build'.
+15:28:19 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22300	   1144	  22568	  46012	   b3bc	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:28:32 **** Incremental Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: No se hace nada para `main-build'.
+15:34:13 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22276	   1144	  22568	  45988	   b3a4	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:34:22 **** Incremental Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: No se hace nada para `main-build'.
+15:39:02 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22368	   1144	  22568	  46080	   b400	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:39:11 **** Incremental Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: No se hace nada para `main-build'.
+15:41:07 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22368	   1144	  22568	  46080	   b400	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:43:22 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22368	   1144	  22568	  46080	   b400	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:43:48 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22368	   1144	  22568	  46080	   b400	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:44:06 **** Incremental Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: No se hace nada para `main-build'.
+15:48:20 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:18:7: warning: unused variable 'c' [-Wunused-variable]
+  char c;
+       ^
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22368	   1144	  22568	  46080	   b400	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:48:41 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:18:7: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  char c;
+       ^
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22408	   1144	  22568	  46120	   b428	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:49:06 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:18:7: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  char c;
+       ^
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22408	   1144	  22568	  46120	   b428	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:49:40 **** Auto Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main_fir.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_fir.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_fir.d" -MT"src/main_fir.o" -o "src/main_fir.o" "../src/main_fir.c"
+../src/main_fir.c: In function 'main':
+../src/main_fir.c:18:7: warning: variable 'c' set but not used [-Wunused-but-set-variable]
+  char c;
+       ^
+'Finished building: ../src/main_fir.c'
+' '
+'Building target: fir_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../fir_app_bsp/ps7_cortexa9_0/lib -o "fir_app.elf"  ./src/main_fir.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fir_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size fir_app.elf  |tee "fir_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22344	   1144	  22568	  46056	   b3e8	fir_app.elf
+'Finished building: fir_app.elf.size'
+' '
+15:49:49 **** Incremental Build of configuration Debug for project fir_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: No se hace nada para `main-build'.

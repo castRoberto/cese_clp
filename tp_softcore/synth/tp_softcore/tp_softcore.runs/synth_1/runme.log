@@ -1,0 +1,549 @@
+
+*** Running vivado
+    with args -log vio_ila.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vio_ila.tcl
+
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source vio_ila.tcl -notrace
+Command: synth_design -top vio_ila -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9796 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 417.547 ; gain = 96.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'vio_ila' [C:/LSE/cese_clp/tp_softcore/src/vio_ila.vhd:17]
+INFO: [Synth 8-3491] module 'vio_0' declared at 'C:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.runs/synth_1/.Xil/Vivado-14292-DESKTOP-FKD1H61/realtime/vio_0_stub.vhdl:5' bound to instance 'vio_inst' of component 'vio_0' [C:/LSE/cese_clp/tp_softcore/src/vio_ila.vhd:57]
+INFO: [Synth 8-638] synthesizing module 'vio_0' [C:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.runs/synth_1/.Xil/Vivado-14292-DESKTOP-FKD1H61/realtime/vio_0_stub.vhdl:15]
+INFO: [Synth 8-638] synthesizing module 'nco' [C:/LSE/cese_clp/tp_softcore/src/nco.vhd:33]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_DEPTH bound to: 1024 - type: integer 
+	Parameter STEP_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gen_ena' [C:/LSE/cese_clp/tp_softcore/src/gen_ena.vhd:20]
+	Parameter N bound to: 7 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'gen_ena' (1#1) [C:/LSE/cese_clp/tp_softcore/src/gen_ena.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'sin_gen' [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:30]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter RAM_DEPTH bound to: 1024 - type: integer 
+	Parameter STEP_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sin_gen' (2#1) [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'gen_ena__parameterized0' [C:/LSE/cese_clp/tp_softcore/src/gen_ena.vhd:20]
+	Parameter N bound to: 100 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'gen_ena__parameterized0' (2#1) [C:/LSE/cese_clp/tp_softcore/src/gen_ena.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'nco' (3#1) [C:/LSE/cese_clp/tp_softcore/src/nco.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'fir' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:25]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'gen_ena__parameterized1' [C:/LSE/cese_clp/tp_softcore/src/gen_ena.vhd:20]
+	Parameter N bound to: 2604 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'gen_ena__parameterized1' (3#1) [C:/LSE/cese_clp/tp_softcore/src/gen_ena.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'fir' (4#1) [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:25]
+INFO: [Synth 8-3491] module 'ila_0' declared at 'C:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.runs/synth_1/.Xil/Vivado-14292-DESKTOP-FKD1H61/realtime/ila_0_stub.vhdl:5' bound to instance 'ila_inst' of component 'ila_0' [C:/LSE/cese_clp/tp_softcore/src/vio_ila.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'ila_0' [C:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.runs/synth_1/.Xil/Vivado-14292-DESKTOP-FKD1H61/realtime/ila_0_stub.vhdl:14]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'nco_inst'. This will prevent further optimization [C:/LSE/cese_clp/tp_softcore/src/vio_ila.vhd:67]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'fir_inst'. This will prevent further optimization [C:/LSE/cese_clp/tp_softcore/src/vio_ila.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'vio_ila' (5#1) [C:/LSE/cese_clp/tp_softcore/src/vio_ila.vhd:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 472.695 ; gain = 152.039
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 472.695 ; gain = 152.039
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 472.695 ; gain = 152.039
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio_inst'
+Finished Parsing XDC File [c:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.srcs/sources_1/ip/vio_0/vio_0/vio_0_in_context.xdc] for cell 'vio_inst'
+Parsing XDC File [c:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.srcs/sources_1/ip/ila_0_3/ila_0/ila_0_in_context.xdc] for cell 'ila_inst'
+Finished Parsing XDC File [c:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.srcs/sources_1/ip/ila_0_3/ila_0/ila_0_in_context.xdc] for cell 'ila_inst'
+Parsing XDC File [C:/LSE/cese_clp/tp_softcore/src/Arty-Z7-10-Master.xdc]
+Finished Parsing XDC File [C:/LSE/cese_clp/tp_softcore/src/Arty-Z7-10-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/LSE/cese_clp/tp_softcore/src/Arty-Z7-10-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vio_ila_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/vio_ila_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 801.914 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 801.914 ; gain = 481.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 801.914 ; gain = 481.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for vio_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for ila_inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 801.914 ; gain = 481.258
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6040] Register index_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element o_signal_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:204]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element sum_2_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:120]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element sum_0_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:118]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element x_2_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element x_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element x_4_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element x_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element x_6_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element x_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element y_temp_0_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:124]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 801.914 ; gain = 481.258
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 4     
++---Registers : 
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	               11 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---ROMs : 
+	                              ROMs := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module gen_ena 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module sin_gen 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
++---ROMs : 
+	                              ROMs := 1     
+Module gen_ena__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module nco 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+Module gen_ena__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fir 
+Detailed RTL Component Info : 
++---Registers : 
+	               30 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6040] Register nco_inst_17KHz/index_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register nco_inst_1_2KHz/index_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element nco_inst_17KHz/o_signal_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:204]
+WARNING: [Synth 8-6014] Unused sequential element nco_inst_1_2KHz/o_signal_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:204]
+WARNING: [Synth 8-6040] Register nco_inst_17KHz/index_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register nco_inst_1_2KHz/index_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6014] Unused sequential element nco_inst_17KHz/o_signal_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:204]
+WARNING: [Synth 8-6014] Unused sequential element nco_inst_1_2KHz/o_signal_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/sin_gen.vhd:204]
+INFO: [Synth 8-4471] merging register 'x_0_reg[15:0]' into 'x_0_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:98]
+INFO: [Synth 8-4471] merging register 'x_0_reg[15:0]' into 'x_0_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:98]
+INFO: [Synth 8-4471] merging register 'x_1_reg[15:0]' into 'x_1_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element x_0_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element x_0_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:98]
+WARNING: [Synth 8-6014] Unused sequential element x_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:99]
+INFO: [Synth 8-4471] merging register 'x_1_reg[15:0]' into 'x_1_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:99]
+INFO: [Synth 8-4471] merging register 'x_2_reg[15:0]' into 'x_2_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:100]
+INFO: [Synth 8-4471] merging register 'x_3_reg[15:0]' into 'x_3_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:101]
+INFO: [Synth 8-4471] merging register 'x_4_reg[15:0]' into 'x_4_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:102]
+INFO: [Synth 8-4471] merging register 'x_5_reg[15:0]' into 'x_5_reg[15:0]' [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element x_2_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:100]
+WARNING: [Synth 8-6014] Unused sequential element x_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:99]
+WARNING: [Synth 8-6014] Unused sequential element x_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element x_4_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element x_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element p_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:109]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:113]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_0_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:108]
+WARNING: [Synth 8-6014] Unused sequential element sum_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:119]
+WARNING: [Synth 8-6014] Unused sequential element p_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:111]
+WARNING: [Synth 8-6014] Unused sequential element p_4_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:112]
+WARNING: [Synth 8-6014] Unused sequential element sum_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:121]
+WARNING: [Synth 8-6014] Unused sequential element p_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element p_2_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:110]
+WARNING: [Synth 8-6014] Unused sequential element p_6_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:114]
+WARNING: [Synth 8-6014] Unused sequential element x_3_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:101]
+WARNING: [Synth 8-6014] Unused sequential element x_5_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:103]
+WARNING: [Synth 8-6014] Unused sequential element x_7_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:105]
+WARNING: [Synth 8-6014] Unused sequential element x_4_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:102]
+WARNING: [Synth 8-6014] Unused sequential element x_6_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:104]
+WARNING: [Synth 8-6014] Unused sequential element y_temp_1_reg was removed.  [C:/LSE/cese_clp/tp_softcore/src/fir.vhd:125]
+DSP Report: Generating DSP p_4_reg, operation Mode is: (A''*(B:0x427))'.
+DSP Report: register x_3_reg is absorbed into DSP p_4_reg.
+DSP Report: register x_4_reg is absorbed into DSP p_4_reg.
+DSP Report: register p_4_reg is absorbed into DSP p_4_reg.
+DSP Report: operator p_40 is absorbed into DSP p_4_reg.
+DSP Report: Generating DSP sum_2_reg, operation Mode is: (PCIN+(ACIN2*(B:0x2a7))')'.
+DSP Report: register x_5_reg is absorbed into DSP sum_2_reg.
+DSP Report: register sum_2_reg is absorbed into DSP sum_2_reg.
+DSP Report: register p_5_reg is absorbed into DSP sum_2_reg.
+DSP Report: operator sum_20 is absorbed into DSP sum_2_reg.
+DSP Report: operator p_50 is absorbed into DSP sum_2_reg.
+DSP Report: Generating DSP p_6_reg, operation Mode is: (ACIN2*(B:0xf0))'.
+DSP Report: register x_6_reg is absorbed into DSP p_6_reg.
+DSP Report: register p_6_reg is absorbed into DSP p_6_reg.
+DSP Report: operator p_60 is absorbed into DSP p_6_reg.
+DSP Report: Generating DSP sum_3_reg, operation Mode is: (PCIN+(ACIN2*(B:0x40))')'.
+DSP Report: register x_7_reg is absorbed into DSP sum_3_reg.
+DSP Report: register sum_3_reg is absorbed into DSP sum_3_reg.
+DSP Report: register p_7_reg is absorbed into DSP sum_3_reg.
+DSP Report: operator sum_30 is absorbed into DSP sum_3_reg.
+DSP Report: operator p_70 is absorbed into DSP sum_3_reg.
+DSP Report: Generating DSP y_temp_1_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register y_temp_1_reg is absorbed into DSP y_temp_1_reg.
+DSP Report: operator y_temp_10 is absorbed into DSP y_temp_1_reg.
+DSP Report: Generating DSP p_0_reg, operation Mode is: (A2*(B:0x40))'.
+DSP Report: register x_0_reg is absorbed into DSP p_0_reg.
+DSP Report: register p_0_reg is absorbed into DSP p_0_reg.
+DSP Report: operator p_00 is absorbed into DSP p_0_reg.
+DSP Report: Generating DSP sum_0_reg, operation Mode is: (PCIN+(A''*(B:0xf0))')'.
+DSP Report: register x_0_reg is absorbed into DSP sum_0_reg.
+DSP Report: register x_1_reg is absorbed into DSP sum_0_reg.
+DSP Report: register sum_0_reg is absorbed into DSP sum_0_reg.
+DSP Report: register p_1_reg is absorbed into DSP sum_0_reg.
+DSP Report: operator sum_00 is absorbed into DSP sum_0_reg.
+DSP Report: operator p_10 is absorbed into DSP sum_0_reg.
+DSP Report: Generating DSP p_2_reg, operation Mode is: (ACIN''*(B:0x2a7))'.
+DSP Report: register x_1_reg is absorbed into DSP p_2_reg.
+DSP Report: register x_2_reg is absorbed into DSP p_2_reg.
+DSP Report: register p_2_reg is absorbed into DSP p_2_reg.
+DSP Report: operator p_20 is absorbed into DSP p_2_reg.
+DSP Report: Generating DSP sum_1_reg, operation Mode is: (PCIN+(ACIN''*(B:0x427))')'.
+DSP Report: register x_2_reg is absorbed into DSP sum_1_reg.
+DSP Report: register x_3_reg is absorbed into DSP sum_1_reg.
+DSP Report: register sum_1_reg is absorbed into DSP sum_1_reg.
+DSP Report: register p_3_reg is absorbed into DSP sum_1_reg.
+DSP Report: operator sum_10 is absorbed into DSP sum_1_reg.
+DSP Report: operator p_30 is absorbed into DSP sum_1_reg.
+DSP Report: Generating DSP y_temp_0_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register y_temp_0_reg is absorbed into DSP y_temp_0_reg.
+DSP Report: operator y_temp_00 is absorbed into DSP y_temp_0_reg.
+DSP Report: Generating DSP output_sum_reg, operation Mode is: (PCIN+A:B)'.
+DSP Report: register output_sum_reg is absorbed into DSP output_sum_reg.
+DSP Report: operator output_sum0 is absorbed into DSP output_sum_reg.
+WARNING: [Synth 8-3332] Sequential element (nco_inst_17KHz/index_reg_rep[10]) is unused and will be removed from module nco.
+WARNING: [Synth 8-3332] Sequential element (nco_inst_1_2KHz/index_reg_rep[10]) is unused and will be removed from module nco.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 801.914 ; gain = 481.258
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------------------------+---------------+----------------+
+|Module Name | RTL Object                   | Depth x Width | Implemented As | 
++------------+------------------------------+---------------+----------------+
+|sin_gen     | o_signal_reg                 | 1024x16       | Block RAM      | 
+|nco         | nco_inst_17KHz/o_signal_reg  | 1024x16       | Block RAM      | 
+|nco         | nco_inst_1_2KHz/o_signal_reg | 1024x16       | Block RAM      | 
+|nco         | nco_inst_17KHz/o_signal_reg  | 1024x16       | Block RAM      | 
+|nco         | nco_inst_1_2KHz/o_signal_reg | 1024x16       | Block RAM      | 
++------------+------------------------------+---------------+----------------+
+
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                 | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fir         | (A''*(B:0x427))'            | 16     | 12     | -      | -      | 28     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(ACIN2*(B:0x2a7))')'  | 16     | 11     | -      | -      | 29     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (ACIN2*(B:0xf0))'           | 16     | 9      | -      | -      | 25     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(ACIN2*(B:0x40))')'   | 16     | 8      | -      | -      | 29     | 1    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (PCIN+A:B)'                 | 11     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (A2*(B:0x40))'              | 16     | 8      | -      | -      | 24     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(A''*(B:0xf0))')'     | 16     | 9      | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (ACIN''*(B:0x2a7))'         | 16     | 11     | -      | -      | 27     | 2    | 0    | -    | -    | -     | 1    | 0    | 
+|fir         | (PCIN+(ACIN''*(B:0x427))')' | 16     | 12     | -      | -      | 29     | 2    | 0    | -    | -    | -     | 1    | 1    | 
+|fir         | (PCIN+A:B)'                 | 11     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fir         | (PCIN+A:B)'                 | 12     | 18     | -      | -      | -1     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance nco_inst/i_0/nco_inst_17KHz/o_signal_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance nco_inst/i_1/nco_inst_1_2KHz/o_signal_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 877.426 ; gain = 556.770
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 877.574 ; gain = 556.918
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4480] The timing for the instance nco_inst/nco_inst_17KHz/o_signal_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-4480] The timing for the instance nco_inst/nco_inst_17KHz/o_signal_reg (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fir         | x_2_reg[15] | 3      | 16    | NO           | NO                 | YES               | 16     | 0       | 
++------------+-------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |vio_0         |         1|
+|2     |ila_0         |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |ila_0_bbox_1 |     1|
+|2     |vio_0_bbox_0 |     1|
+|3     |BUFG         |     2|
+|4     |CARRY4       |    73|
+|5     |DSP48E1      |     1|
+|6     |DSP48E1_1    |     2|
+|7     |DSP48E1_2    |     1|
+|8     |DSP48E1_3    |     3|
+|9     |DSP48E1_4    |     1|
+|10    |DSP48E1_5    |     1|
+|11    |DSP48E1_6    |     1|
+|12    |DSP48E1_7    |     1|
+|13    |LUT1         |     9|
+|14    |LUT2         |    49|
+|15    |LUT3         |    31|
+|16    |LUT4         |     1|
+|17    |RAMB18E1     |     1|
+|18    |SRL16E       |    16|
+|19    |FDRE         |   173|
+|20    |IBUF         |     1|
++------+-------------+------+
+
+Report Instance Areas: 
++------+----------------------------+------------------------+------+
+|      |Instance                    |Module                  |Cells |
++------+----------------------------+------------------------+------+
+|1     |top                         |                        |   374|
+|2     |  nco_inst                  |nco                     |   237|
+|3     |    gen_ena_nco_inst_17KHz  |gen_ena                 |    67|
+|4     |    gen_ena_nco_inst_1_2KHz |gen_ena__parameterized0 |    67|
+|5     |    nco_inst_17KHz          |sin_gen                 |    63|
+|6     |    nco_inst_1_2KHz         |sin_gen_0               |    40|
+|7     |  fir_inst                  |fir                     |   128|
+|8     |    gen_ena_inst_fir        |gen_ena__parameterized1 |    67|
++------+----------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 61 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 887.668 ; gain = 237.793
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 887.668 ; gain = 567.012
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+44 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 887.668 ; gain = 568.715
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'C:/LSE/cese_clp/tp_softcore/synth/tp_softcore/tp_softcore.runs/synth_1/vio_ila.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vio_ila_utilization_synth.rpt -pb vio_ila_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 887.668 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 16 02:37:46 2025...

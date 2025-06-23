@@ -1,0 +1,150 @@
+# Definitional proc to organize widgets for parameters.
+proc init_gui { IPINST } {
+  ipgui::add_param $IPINST -name "Component_Name"
+  #Adding Page
+  set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
+  ipgui::add_param $IPINST -name "C_S_AXI_BASEADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "C_S_AXI_HIGHADDR" -parent ${Page_0}
+
+  ipgui::add_param $IPINST -name "DATA_WIDTH"
+  ipgui::add_param $IPINST -name "RAM_DEPTH"
+  ipgui::add_param $IPINST -name "STEP_WIDTH"
+  ipgui::add_param $IPINST -name "FREQ_BASE"
+  ipgui::add_param $IPINST -name "FREQ_NOISE"
+  ipgui::add_param $IPINST -name "FREQ_SIGNAL"
+  ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH"
+  ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH"
+
+}
+
+proc update_PARAM_VALUE.C_S_AXI_ADDR_WIDTH { PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
+	# Procedure called to update C_S_AXI_ADDR_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.C_S_AXI_ADDR_WIDTH { PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
+	# Procedure called to validate C_S_AXI_ADDR_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.C_S_AXI_DATA_WIDTH { PARAM_VALUE.C_S_AXI_DATA_WIDTH } {
+	# Procedure called to update C_S_AXI_DATA_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.C_S_AXI_DATA_WIDTH { PARAM_VALUE.C_S_AXI_DATA_WIDTH } {
+	# Procedure called to validate C_S_AXI_DATA_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.DATA_WIDTH { PARAM_VALUE.DATA_WIDTH } {
+	# Procedure called to update DATA_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.DATA_WIDTH { PARAM_VALUE.DATA_WIDTH } {
+	# Procedure called to validate DATA_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.FREQ_BASE { PARAM_VALUE.FREQ_BASE } {
+	# Procedure called to update FREQ_BASE when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.FREQ_BASE { PARAM_VALUE.FREQ_BASE } {
+	# Procedure called to validate FREQ_BASE
+	return true
+}
+
+proc update_PARAM_VALUE.FREQ_NOISE { PARAM_VALUE.FREQ_NOISE } {
+	# Procedure called to update FREQ_NOISE when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.FREQ_NOISE { PARAM_VALUE.FREQ_NOISE } {
+	# Procedure called to validate FREQ_NOISE
+	return true
+}
+
+proc update_PARAM_VALUE.FREQ_SIGNAL { PARAM_VALUE.FREQ_SIGNAL } {
+	# Procedure called to update FREQ_SIGNAL when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.FREQ_SIGNAL { PARAM_VALUE.FREQ_SIGNAL } {
+	# Procedure called to validate FREQ_SIGNAL
+	return true
+}
+
+proc update_PARAM_VALUE.RAM_DEPTH { PARAM_VALUE.RAM_DEPTH } {
+	# Procedure called to update RAM_DEPTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RAM_DEPTH { PARAM_VALUE.RAM_DEPTH } {
+	# Procedure called to validate RAM_DEPTH
+	return true
+}
+
+proc update_PARAM_VALUE.STEP_WIDTH { PARAM_VALUE.STEP_WIDTH } {
+	# Procedure called to update STEP_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.STEP_WIDTH { PARAM_VALUE.STEP_WIDTH } {
+	# Procedure called to validate STEP_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.C_S_AXI_BASEADDR { PARAM_VALUE.C_S_AXI_BASEADDR } {
+	# Procedure called to update C_S_AXI_BASEADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.C_S_AXI_BASEADDR { PARAM_VALUE.C_S_AXI_BASEADDR } {
+	# Procedure called to validate C_S_AXI_BASEADDR
+	return true
+}
+
+proc update_PARAM_VALUE.C_S_AXI_HIGHADDR { PARAM_VALUE.C_S_AXI_HIGHADDR } {
+	# Procedure called to update C_S_AXI_HIGHADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.C_S_AXI_HIGHADDR { PARAM_VALUE.C_S_AXI_HIGHADDR } {
+	# Procedure called to validate C_S_AXI_HIGHADDR
+	return true
+}
+
+
+proc update_MODELPARAM_VALUE.DATA_WIDTH { MODELPARAM_VALUE.DATA_WIDTH PARAM_VALUE.DATA_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.DATA_WIDTH}] ${MODELPARAM_VALUE.DATA_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.RAM_DEPTH { MODELPARAM_VALUE.RAM_DEPTH PARAM_VALUE.RAM_DEPTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RAM_DEPTH}] ${MODELPARAM_VALUE.RAM_DEPTH}
+}
+
+proc update_MODELPARAM_VALUE.STEP_WIDTH { MODELPARAM_VALUE.STEP_WIDTH PARAM_VALUE.STEP_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.STEP_WIDTH}] ${MODELPARAM_VALUE.STEP_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.FREQ_BASE { MODELPARAM_VALUE.FREQ_BASE PARAM_VALUE.FREQ_BASE } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.FREQ_BASE}] ${MODELPARAM_VALUE.FREQ_BASE}
+}
+
+proc update_MODELPARAM_VALUE.FREQ_NOISE { MODELPARAM_VALUE.FREQ_NOISE PARAM_VALUE.FREQ_NOISE } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.FREQ_NOISE}] ${MODELPARAM_VALUE.FREQ_NOISE}
+}
+
+proc update_MODELPARAM_VALUE.FREQ_SIGNAL { MODELPARAM_VALUE.FREQ_SIGNAL PARAM_VALUE.FREQ_SIGNAL } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.FREQ_SIGNAL}] ${MODELPARAM_VALUE.FREQ_SIGNAL}
+}
+
+proc update_MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH { MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH PARAM_VALUE.C_S_AXI_DATA_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.C_S_AXI_DATA_WIDTH}] ${MODELPARAM_VALUE.C_S_AXI_DATA_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.C_S_AXI_ADDR_WIDTH}] ${MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH}
+}
+

@@ -1,0 +1,30 @@
+/*
+ * main_fir.c
+
+ *
+ *  Created on: 17/06/2025
+ *      Author: rober
+ */
+#include "xparameters.h"
+#include "ip_nco.h"
+#include "xil_io.h"
+
+int main () {
+
+	xil_printf("Inicio de programa!!!");
+
+	while (1) {
+
+		xil_printf ("Se establece paso en 1");
+
+		IP_NCO_mWriteReg (XPAR_IP_NCO_0_S_AXI_BASEADDR, IP_NCO_S_AXI_SLV_REG0_OFFSET, 0x1);
+
+		for (int i=0; i<9999999; i++);
+
+
+
+	}
+
+
+	return 0;
+}

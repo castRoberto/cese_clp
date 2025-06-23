@@ -17,6 +17,11 @@ architecture fir_test of fir_tb is
   constant RAM_DEPTH : natural := 2**10;
   constant DATA_WIDTH : natural := 16;
   constant STEP_WIDTH : natural := 5;
+  constant FREQ_BASE : natural := 125_000_000; -- Base frequency for the NCO
+  constant FREQ_NOISE : natural := 17_000; -- Frequency of the noise signal
+  constant FREC_SIGNAL : natural := 1_200; -- Frequency of the sine signal
+
+  constant SAMPLE_RATE : natural := 48_000; -- Sample rate for the FIR filter
 
   -- Clocks
   signal clk    : std_logic := '0';
@@ -31,7 +36,6 @@ architecture fir_test of fir_tb is
 begin
 
   clk     <= not clk after 4 ns;
-  enable  <= '1' after 10 ns;
   rst     <= '0' after 10 ns;
   step    <= "00001" after 10 ns;
 
@@ -39,14 +43,16 @@ begin
 
   nco_inst : entity work.nco
     generic map (
-      DATA_WIDTH => DATA_WIDTH,
-      RAM_DEPTH  => RAM_DEPTH,
-      STEP_WIDTH => STEP_WIDTH
+      DATA_WIDTH  => DATA_WIDTH,
+      RAM_DEPTH   => RAM_DEPTH,
+      STEP_WIDTH  => STEP_WIDTH,
+      FREQ_BASE   => FREQ_BASE,
+      FREQ_NOISE  => FREQ_NOISE,
+      FREQ_SIGNAL => FREC_SIGNAL
     )
     port map (
       i_clock   => clk,
       i_rst     => rst,
-      i_enable  => enable,
       i_step    => step,
       o_signal  => sin_raw
     );
@@ -56,12 +62,13 @@ begin
   --
   fir_inst : entity work.fir
     generic map (
-      DATA_WIDTH => DATA_WIDTH
+      DATA_WIDTH  => DATA_WIDTH,
+      FREQ_BASE   => FREQ_BASE,
+      SAMPLE_RATE => SAMPLE_RATE
     )
     port map (
       i_clk     => clk,
       i_rst     => rst,
-      i_enable  => enable,
       i_x       => sin_raw,
       i_y       => sin_fir
     );
